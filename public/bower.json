@@ -1,0 +1,26 @@
+{
+  "name": "bower",
+  "description": "bower",
+  "main": "bower",
+  "keywords": [
+    "bower"
+  ],
+  "authors": [
+    "john dickinson"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "^1.5.8",
+    "bootstrap": "^3.3.6",
+    "angular-cookies": "^1.5.8"
+  }
+}

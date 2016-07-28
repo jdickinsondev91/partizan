@@ -1,0 +1,18 @@
+<div class="well" ng-controller="userCtrl">
+    <form class="form-signin" name="frmLogin" ng-submit="login()" novalidate>
+    <h2 class="form-signin-heading">Please sign in</h2>
+    
+    <label for="email" class="sr-only">Email:</label>
+    <input type="email" name="email" class="form-control" placeholder="Email address" ng-model="login.email" required>
+    <p style="color:red" ng-show="frmLogin.email.$error.email">Enter a valid email</p>
+    <p style="color:red" ng-show="frmLogin.email.$error.required">*Required</p>
+    
+    <label for="password" class="sr-only">Password:</label>
+    <input type="password" name="password" id="password" class="form-control" placeholder="Password" required="" ng-model="login.password" ng-minlength="8"
+           ng-pattern="regex">
+    <p style="color:red" ng-show="frmLogin.password.$error.minlength">Password should be at least 8 characters long</p>
+    <p style="color:red" ng-show="frmLogin.password.$error.pattern">Password must contain at least one uppercase, lowercase letter and a number</p>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit" ng-disabled="frmLogin.$invalid">Sign in</button>
+</form>
+</div>
